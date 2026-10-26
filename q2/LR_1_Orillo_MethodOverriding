@@ -1,0 +1,46 @@
+class Animal():
+    def __init__(self, name):
+        self.__name = name
+
+    def get_name(self):
+        return self.__name
+
+    def set_name(self, name):
+        self.__name = name
+
+    def eat(self):
+        print(f"{self.__name} is eating.")
+
+    def make_sound(self):
+        print(f"{self.__name} is making a sound.")
+
+class Lion(Animal):
+    def make_sound(self):
+        print(f"{self.get_name()} roars.")
+
+    def eat(self):
+        print(f"{self.get_name()} is eating meat Fresh meat.")
+
+class Elephant(Animal):
+    def make_sound(self):
+        print(f"{self.get_name()} Trumpets.")
+
+    def eat(self):
+        print(f"{self.get_name()} is eating grass and fruit.")
+
+class Monkey(Animal):
+    def make_sound(self):
+        print(f"{self.get_name()} Chatters.")
+
+    def eat(self):
+        print(f"{self.get_name()} is eating banana.")
+
+lion1 = Lion("Simba")
+elephant1 = Elephant("Dumbo")
+monkey1 = Monkey("George")
+
+animals = [lion1, elephant1, monkey1]
+
+for animal in animals:
+    animal.make_sound()
+    animal.eat()
