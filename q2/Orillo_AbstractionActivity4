@@ -1,0 +1,27 @@
+from abc import ABC, abstractmethod
+class Sensor(ABC):
+
+    @abstractmethod
+
+    def get_reading(self, temperature):
+        pass
+
+class PHSensor(Sensor):
+
+    def get_reading(self, temperature):
+        print(f"pH Level: {temperature} ph")
+
+class TempSensor(Sensor):
+
+    def get_reading(self, temperature):
+        print(f"Temperature: {temperature}°C")
+
+
+print("--Lab Inventory System--")
+my_ph_sensor = PHSensor()
+my_ph_sensor.get_reading(7.2)
+
+my_temp_sensor = TempSensor()
+my_temp_sensor.get_reading(24.5)
+
+my_sensor = Sensor()
